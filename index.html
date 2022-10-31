@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Toets
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <script>
+        function bColor(color) {
+            if((document.getElementById('color0').checked)) {
+                document.body.style.backgroundColor = color;
+            } else if((document.getElementById('color1').checked)) {
+                document.body.style.backgroundColor = color;
+            } else if((document.getElementById('color2').checked)) {
+                document.body.style.backgroundColor = color;
+            } else if((document.getElementById('color3').checked)) {
+                document.body.style.backgroundColor = color;
+            } else {
+                document.body.style.backgroundColor = 'white';
+            }
+        }
+    </script>
+    <body>
+    <form action="php/index.php" method="post">
+        <section class="input">
+                <label for="name">Voer uw naam in:</label>
+                <br>
+                <input type="text" name="name">
+        </section>
+        <section class="container">
+        <nav id="btns">
+            <ul>
+                <li>
+                    <label for="blue">lightblue</label>
+                    <input type="checkbox" onclick="bColor('lightblue')" id="color0" name="col" value="lightblue"></input>
+                </li>
+                <li>
+                    <label for="blue">coral</label>
+                    <input type="checkbox" onclick="bColor('coral')" id="color1" name="col" value="coral"></input>
+                </li>
+                <li>
+                    <label for="blue">lightgrey</label>
+                    <input type="checkbox" onclick="bColor('lightgrey')" id="color2" name="col" value="lightgrey"></input>
+                </li>
+                <li>
+                    <label for="blue">bisque</label>
+                    <input type="checkbox" onclick="bColor('bisque')" id="color3" name="col" value="bisque"></input>
+                </li>
+            </ul>
+        </nav>
+        </section>
+        <input type="submit" id="submit">
+    </form>
+    </body>
+</html>
